@@ -16,7 +16,7 @@
 #define SYM 1
 #define UPPER 2
 
-&mt { tapping-term-ms = <220>; };
+&mt { tapping-term-ms = <230>; };
 
 / {
     behaviors {
