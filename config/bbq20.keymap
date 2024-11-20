@@ -33,6 +33,33 @@
             tapping-term-ms = <500>;
             bindings = <&out &kp>;
         };
+
+        ALTL: ALTL {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALTL";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_ALT>, <&to 2>;
+
+            tapping-term-ms = <300>;
+        };
+
+        SHFT: SHFT {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHFT";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_SHIFT>, <&kp CAPSLOCK>;
+
+            tapping-term-ms = <300>;
+        };
+
+        Symbol: Symbol {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SYMBOL";
+            #binding-cells = <0>;
+            bindings = <&sl 1>, <&to 1>;
+
+            tapping-term-ms = <300>;
+        };
     };
 
     combos {
@@ -53,30 +80,30 @@
 &kp CLCK   &kp LGUI   &mkp LCLK       &mt ESC K_BACK  &kp TAB
 &kp Q      &kp W      &kp E           &kp R           &kp T      &kp Y        &kp U    &kp I      &kp O       &kp P
 &kp A      &kp S      &kp D           &kp F           &kp G      &kp H        &kp J    &kp K      &kp L       &kp BSPC
-&sl 2      &kp Z      &kp X           &kp C           &kp V      &kp B        &kp N    &kp M      &kp DOLLAR  &kp ENTER
-                      &sk LEFT_SHIFT                  &kt LCTRL  &kp SPACE    &sl SYM  &sk RCTRL
+&ALTL      &kp Z      &kp X           &kp C           &kp V      &kp B        &kp N    &kp M      &kp DOLLAR  &kp ENTER
+                      &sk LEFT_SHIFT                  &kt LCTRL  &kp SPACE    &Symbol  &sk RCTRL
             >;
         };
 
         sym_layer {
             bindings = <
 &kp C_VOL_UP  &kp C_VOL_DN
-&kp PSCRN     &kp C_AC_SEARCH  &mkp LCLK  &kp F5  &kp F12
-&kp HASH      &kp N1           &kp N2     &kp N3  &mt LBKT LPAR  &mt RBKT RPAR    &kp UNDER  &kp MINUS  &kp PLUS    &kp AT
-&kp STAR      &kp N4           &kp N5     &kp N6  &kp SLASH      &kp COLON        &kp SEMI   &kp APOS   &kp DQT     &kp BACKSPACE
-&tog 2        &kp N7           &kp N8     &kp N9  &kp QMARK      &kp EXCL         &kp COMMA  &kp DOT    &kp C_MUTE  &kp ENTER
-                               &kp LCTRL          &kp N0         &kp SPACE        &tog SYM   &sk RCTRL
+&kp PSCRN     &kp C_AC_SEARCH  &mkp LCLK          &kp F5  &kp F12
+&kp HASH      &kp N1           &kp N2             &kp N3  &mt LBKT LPAR  &mt RBKT RPAR    &kp UNDER  &kp MINUS  &kp PLUS    &kp AT
+&kp STAR      &kp N4           &kp N5             &kp N6  &kp SLASH      &kp COLON        &kp SEMI   &kp APOS   &kp DQT     &kp BACKSPACE
+&to 2         &kp N7           &kp N8             &kp N9  &kp QMARK      &kp EXCL         &kp COMMA  &kp DOT    &kp C_MUTE  &kp ENTER
+                               &ext_power EP_TOG          &kp N0         &kp SPACE        &to 0      &sk RCTRL
             >;
         };
 
         upper_layer {
             bindings = <
 &msc SCRL_UP  &msc SCRL_DOWN
-&bt BT_SEL 0  &bt BT_SEL 1    &td0            &bt BT_SEL 2  &bt BT_SEL 3
-&kp HOME      &kp UP          &kp END         &sys_reset    &ext_power EP_TOG  &none                &kp LT      &kp GT     &kp PIPE     &kp KP_EQUAL
-&kp LEFT      &kp DOWN        &kp RIGHT       &none         &kp BSLH           &kp AMPS             &kp LBRC    &kp RBRC   &kp CARET    &kp DELETE
-&tog 1        &none           &none           &none         &bl BL_DEC         &bl BL_TOG           &bl BL_INC  &none      &bootloader  &kp ENTER
-                              &sk LEFT_SHIFT                &kp LALT           &hm OUT_TOG SPACE    &tog SYM    &sk RCTRL
+&bt BT_SEL 0  &bt BT_SEL 1    &td0            &bt BT_SEL 2   &bt BT_SEL 3
+&kp HOME      &kp UP          &kp END         &kp PAGE_UP    &ext_power EP_TOG  &none                &kp LT      &kp GT      &kp PIPE     &kp KP_EQUAL
+&kp LEFT      &kp DOWN        &kp RIGHT       &kp PAGE_DOWN  &kp BSLH           &kp AMPS             &kp LBRC    &kp RBRC    &kp CARET    &kp DELETE
+&to 0         &none           &none           &none          &bl BL_DEC         &bl BL_TOG           &bl BL_INC  &sys_reset  &bootloader  &kp ENTER
+                              &sk LEFT_SHIFT                 &kp LALT           &hm OUT_TOG SPACE    &to 1       &sk RCTRL
             >;
         };
     };
