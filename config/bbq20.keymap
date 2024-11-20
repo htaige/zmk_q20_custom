@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -77,11 +76,11 @@
         default_layer {
             bindings = <
 &mkp LCLK    &mkp RCLK
-&kp CLCK     &kp LGUI     &mkp LCLK       &mt ESC K_BACK  &kp TAB
-&mt LS(Q) Q  &mt LS(W) W  &mt LS(E) E     &mt LS(R) R     &mt LS(T) T  &mt LS(Y) Y    &mt LS(U) U  &mt LS(I) I  &mt LS(O) O      &mt LS(P) P
-&mt LS(A) A  &mt LS(S) S  &mt LS(D) D     &mt LS(F) F     &mt LS(G) G  &mt LS(H) H    &mt LS(J) J  &mt LS(K) K  &mt LS(L) L      &kp BSPC
-&ALTL        &mt LS(Z) Z  &mt LS(X) X     &mt LS(C) C     &mt LS(V) V  &mt LS(B) B    &mt LS(N) N  &mt LS(M) M  &mt DOLLAR BSLH  &kp ENTER
-                          &sk LEFT_SHIFT                  &kt LCTRL    &kp SPACE      &Symbol      &sk RCTRL
+&kp CLCK     &kp LGUI     &mkp LCLK    &mt ESC K_BACK  &kp TAB
+&mt LS(Q) Q  &mt LS(W) W  &mt LS(E) E  &mt LS(R) R     &mt LS(T) T                &mt LS(Y) Y    &mt LS(U) U  &mt LS(I) I  &mt LS(O) O      &mt LS(P) P
+&mt LS(A) A  &mt LS(S) S  &mt LS(D) D  &mt LS(F) F     &mt LS(G) G                &mt LS(H) H    &mt LS(J) J  &mt LS(K) K  &mt LS(L) L      &kp BSPC
+&ALTL        &mt LS(Z) Z  &mt LS(X) X  &mt LS(C) C     &mt LS(V) V                &mt LS(B) B    &mt LS(N) N  &mt LS(M) M  &mt DOLLAR BSLH  &kp ENTER
+                          &SHFT                        &mt C_VOICE_COMMAND LCTRL  &kp SPACE      &Symbol      &sk RCTRL
             >;
         };
 
