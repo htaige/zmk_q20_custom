@@ -78,9 +78,9 @@
             bindings = <
 &mkp LCLK    &mkp RCLK
 &kp CLCK     &kp LGUI   &mkp LCLK       &mt ESC K_BACK  &kp TAB
-&mtt LS(Q) Q	&mtt LS(W) W      &mtt LS(E) E	&mtt LS(R) R     &mtt LS(T) T	&mtt LS(Y) Y	&mtt LS(U) U	&mtt LS(I) I	&mtt LS(O) O	    &mtt LS(P) P
-&mtt LS(A) A	&mtt LS(S) S      &mtt LS(D) D	&mtt LS(F) F     &mtt LS(G) G	&mtt LS(H) H	&mtt LS(J) J	&mtt LS(K) K	&mtt LS(L) L        &kp BSPC
- &ALTL		    &mtt LS(Z) Z      &mtt LS(X) X	&mtt LS(C) C     &mtt LS(V) V	&mtt LS(B) B	&mtt LS(N) N	&mtt LS(M) M	&mtt K_STOP LG(N)   &kp ENTER
+&mt LS(Q) Q	&mt LS(W) W      &mt LS(E) E	&mt LS(R) R     &mt LS(T) T	&mt LS(Y) Y	&mt LS(U) U	&mt LS(I) I	&mt LS(O) O	    &mt LS(P) P
+&mt LS(A) A	&mt LS(S) S      &mt LS(D) D	&mt LS(F) F     &mt LS(G) G	&mt LS(H) H	&mt LS(J) J	&mt LS(K) K	&mt LS(L) L        &kp BSPC
+ &ALTL		    &mt LS(Z) Z      &mt LS(X) X	&mt LS(C) C     &mt LS(V) V	&mt LS(B) B	&mt LS(N) N	&mt LS(M) M	&mt K_STOP LG(N)   &kp ENTER
                                     &sk LEFT_SHIFT                  &kt LCTRL      &kp SPACE        &Symbol      &sk RCTRL
             >;
         };
