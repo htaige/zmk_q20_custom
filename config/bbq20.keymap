@@ -19,7 +19,10 @@
 #define SYM 1
 #define UPPER 2
 
-&mt { tapping-term-ms = <300>; };
+&mt {
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+};
 
 / {
     behaviors {
